@@ -11,7 +11,7 @@ use this as a component of another Polymer element.
 
 ##Events
 ###click
-Pretty much everythign fires click, but just reminding you!
+Pretty much everything fires click, but just reminding you!
 
 ##Attributes and Change Handlers
 ###enabled
