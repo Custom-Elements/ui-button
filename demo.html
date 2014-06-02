@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>ui-button</title>
+    <script src="node_modules/polymer/platform.js"></script>
+    <link rel="import" href="node_modules/polymer/polymer.html">
+    <link rel="import" href="build/ui-button.html">
+    <link rel="stylesheet" href="node_modules/ui-fonts/build/font-awesome.css">
+    <style>
+      body {
+        font-family: "Helvetica Neue", "Helvetica", Arial;
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <div id="holder">
+      <ui-button icon="fa-bomb" label="The Bomb!" hotkey="b" onclick="console.log('boom!');">
+      </ui-button>
+      <ui-button icon="fa-bullhorn" label="No Yelling" hotkey="y" enabled="false" onclick="console.log('aaaa!');">
+      </ui-button>
+    </div>
+    <script>
+      document.addEventListener('polymer-ready', function() {
+        //poke your element here
+      })
+    </script>
+  </body>
+</html>

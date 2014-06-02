@@ -1,0 +1,32 @@
+@import "node_modules/ui-fonts/build/font-awesome";
+@import "node_modules/ui-styles/variables";
+:host {
+  display: inline-block;
+  #button {
+    display: flex;
+    vertical-align: middle;
+    border: none;
+    outline: none;
+    margin: none;
+    padding: 0.65em 0.65em;
+    font-weight: 200;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.05));
+    .box-shadow(0px 0px 0px 1px rgba(0,0,0,0.08) inset);
+    .transition(@transition);
+    color: @light-grey;
+    cursor: default;
+    &.enabled {
+      color: @black;
+      cursor: pointer;
+    }
+    &.pressed {
+      .transform(scale(0.95, 0.95));
+    }
+  }
+  #icon {
+    padding-right: 0.25em;
+  }
+  #label {
+    flex: 1;
+  }
+}
