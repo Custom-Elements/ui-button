@@ -3,7 +3,7 @@ on-mousedown="{{pointerdown}}" on-mouseup="{{pointerup}}" on-mouseenter="{{point
 >
 <template>
   <link rel="stylesheet" type="text/css" href="./ui-button.css">
-  <section id="button" class="{{ {enabled: enabled} | tokenList }}" on-click="{{pointerclick}}">
+  <section id="button" class="{{ {enabled: enabled} | tokenList }}">
     <template if="{{icon}}">
       <i id="icon" class="fa {{icon}}"></i>
     </template>

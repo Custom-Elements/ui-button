@@ -10,10 +10,10 @@
     margin: none;
     padding: 0.65em 0.65em;
     font-weight: 200;
-    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.05));
-    .box-shadow(0px 0px 0px 1px rgba(0,0,0,0.08) inset);
+    background-image: linear-gradient(@hairline-grey, @hairline-grey);
+    .box-shadow(0px 0px 0px 1px @hairline-grey inset);
     .transition(@transition);
-    color: @light-grey;
+    color: fade(@black, @disabled);
     cursor: default;
     &.enabled {
       color: @black;

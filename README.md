@@ -9,7 +9,7 @@ use this as a component of another Polymer element.
 
 ##Events
 ###click
-Pretty much everythign fires click, but just reminding you!
+Pretty much everything fires click, but just reminding you!
 
 ##Attributes and Change Handlers
 ###enabled
@@ -27,13 +27,6 @@ Character or character code to enable hotkeys. For example 32 is hotkey space.
 
 
 
-
-
-
-
-
-The click is inside the element, on the button section in order to
-have a chance to stop the event when `enabled='false'`
 
 
 

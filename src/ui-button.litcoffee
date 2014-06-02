@@ -35,14 +35,6 @@ Character or character code to enable hotkeys. For example 32 is hotkey space.
       pointerenter: ->
       pointerleave: ->
 
-The click is inside the element, on the button section in order to
-have a chance to stop the event when `enabled='false'`
-
-      pointerclick: (evt) ->
-        if not @enabled
-          evt.stopPropagation()
-          evt.preventDefault()
-
 ##Polymer Lifecycle
 
       created: ->
