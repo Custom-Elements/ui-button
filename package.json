@@ -17,7 +17,8 @@
     "express": "",
     "polymer": "git://github.com/Custom-Elements/polymer",
     "ui-styles": "git://github.com/custom-elements/ui-styles",
-    "ui-fonts": "git://github.com/custom-elements/ui-fonts"
+    "ui-fonts": "git://github.com/custom-elements/ui-fonts",
+    "express-livereload": "0.0.24"
   },
   "license": "MIT",
   "scripts": {

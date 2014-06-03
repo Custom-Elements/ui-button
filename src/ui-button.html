@@ -1,9 +1,8 @@
 <polymer-element name="ui-button" attributes="enabled icon label hotkey"
-on-mousedown="{{pointerdown}}" on-mouseup="{{pointerup}}" on-mouseenter="{{pointerenter}}" on-mouseleave="{{pointerleave}}"
->
+on-mousedown="{{pointerdown}}" on-mouseup="{{pointerup}}" on-mouseenter="{{pointerenter}}" on-mouseleave="{{pointerleave}}">
 <template>
   <link rel="stylesheet" type="text/css" href="./ui-button.css">
-  <section id="button" class="{{ {enabled: enabled} | tokenList }}">
+  <section id="button" class="{{ {enabled: enabled} | tokenList }}" on-click="{{click}}">
     <template if="{{icon}}">
       <i id="icon" class="fa {{icon}}"></i>
     </template>

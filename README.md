@@ -32,6 +32,12 @@ Character or character code to enable hotkeys. For example 32 is hotkey space.
 
 
 
+
+
+
+
+
+
 ##Polymer Lifecycle
 
 

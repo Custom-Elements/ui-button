@@ -32,6 +32,13 @@ Character or character code to enable hotkeys. For example 32 is hotkey space.
           @$.button.classList.add 'pressed'
       pointerup: ->
         @$.button.classList.remove 'pressed'
+      click: (evt) ->
+        if not @enabled
+          evt.preventDefault()
+          evt.stopPropagation()
+          evt.stopImmediatePropagation()
+          return false
+
       pointerenter: ->
       pointerleave: ->
 
