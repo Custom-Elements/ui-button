@@ -8,11 +8,8 @@
     "ui-fonts": "git://github.com/custom-elements/ui-fonts#master"
   },
   "author": "Will Ballard <wballard@mailframe.net>",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/custom-elements/ui-button.git"
-  },
-  "license": "MIT",
+  "repository": "git://github.com/custom-elements/ui-button.git",
+  "license": "ISC",
   "scripts": {
     "postinstall": "polymer-build src/ build/",
     "test": "polymer-build watch . src/ build/"
