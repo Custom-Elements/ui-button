@@ -1,9 +1,9 @@
 #ui-button
-The basic button with 
+The basic button with
 [FontAwesome](http://fortawesome.github.io/Font-Awesome/) based icons
 and a text label.
 
-Attach an `onclick` with straight JavaScript or an `on-click` if you 
+Attach an `onclick` with straight JavaScript or an `on-click` if you
 use this as a component of another Polymer element.
 
 
@@ -20,8 +20,6 @@ Enable or disable the button.
 This is a `fa-` icon name.
 ###label
 Simple text to display.
-###hotkey
-Character or character code to enable hotkeys. For example 32 is hotkey space.
 
 ##Methods
 
@@ -50,17 +48,6 @@ Character or character code to enable hotkeys. For example 32 is hotkey space.
       ready: ->
 
       attached: ->
-
-This element hooks to the document to process hotkeys.
-
-        document.addEventListener 'keydown', (e) =>
-          return unless @hotkey
-          key = if isNaN(@hotkey) then String.fromCharCode(e.keyCode).toLowerCase() else e.keyCode.toString()
-          activeElem = document.activeElement.tagName.toLowerCase()
-          if @enabled and key is @hotkey and ( e.altKey or ( activeElem != 'textarea' and activeElem != 'input' ) )
-            @fire 'click'
-            e.preventDefault?()
-            e.stopPropagation?()
 
       domReady: ->
 
