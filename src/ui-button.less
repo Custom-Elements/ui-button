@@ -9,11 +9,10 @@
   -ms-user-select: none;
   user-select: none;
   #button {
-    display: flex;
     align-items: center;
     border: none;
     outline: none;
-    margin: none;
+    margin: 0;
     padding: 0.65em 0.65em;
     font-weight: 200;
     background-color: @hairline-grey;
@@ -22,6 +21,7 @@
     .transition(@transition);
     color: @color-disabled-text;
     cursor: default;
+    white-space: nowrap;
     &.enabled {
       color: @color-text;
       cursor: pointer;
@@ -32,9 +32,6 @@
   }
   #icon {
     padding-right: 0.35em;
-  }
-  #label {
-    flex: 1;
   }
 }
 
