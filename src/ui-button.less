@@ -9,6 +9,7 @@
   -ms-user-select: none;
   user-select: none;
   #button {
+    overflow: hidden;
     align-items: center;
     border: none;
     outline: none;
@@ -22,6 +23,7 @@
     color: @color-disabled-text;
     cursor: default;
     white-space: nowrap;
+    text-overflow: ellipsis;
     &.enabled {
       color: @color-text;
       cursor: pointer;

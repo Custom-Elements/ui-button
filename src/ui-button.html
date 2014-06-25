@@ -2,7 +2,7 @@
 on-mousedown="{{pointerdown}}" on-mouseup="{{pointerup}}" on-mouseenter="{{pointerenter}}" on-mouseleave="{{pointerleave}}">
 <template>
   <link rel="stylesheet" type="text/css" href="./ui-button.less">
-  <section id="button" class="{{ {enabled: enabled} | tokenList }}" on-click="{{click}}">
+  <section id="button" class="{{ {enabled: enabled} | tokenList }}" on-click="{{click}}" title="{{label}}">
     <template if="{{icon}}">
       <i id="icon" class="fa {{icon}}"></i>
     </template>
