@@ -1,11 +1,8 @@
 #ui-button
-The basic button with
-[FontAwesome](http://fortawesome.github.io/Font-Awesome/) based icons
-and a text label.
+The basic button that wraps your content. Fun press effects.
 
 Attach an `onclick` with straight JavaScript or an `on-click` if you
 use this as a component of another Polymer element.
-
 
     Polymer 'ui-button',
 
@@ -14,28 +11,23 @@ use this as a component of another Polymer element.
 Pretty much everything fires click, but just reminding you!
 
 ##Attributes and Change Handlers
-###enabled
-Enable or disable the button.
-###icon
-This is a `fa-` icon name.
-###label
-Simple text to display.
+###disabled
+Marker turns the button off temporarily. Please hide buttons instead.
 
 ##Methods
 
 ##Event Handlers
 
       pointerdown: ->
-        if @enabled
+        if not @hasAttribute 'disabled'
           @$.button.classList.add 'pressed'
       pointerup: ->
         @$.button.classList.remove 'pressed'
-      click: (evt) ->
-        if not @enabled
-          evt.preventDefault()
-          evt.stopPropagation()
-          evt.stopImmediatePropagation()
-          return false
+      supress: (evt) ->
+        evt.preventDefault()
+        evt.stopPropagation()
+        evt.stopImmediatePropagation()
+        return false
 
       pointerenter: ->
       pointerleave: ->
@@ -43,7 +35,6 @@ Simple text to display.
 ##Polymer Lifecycle
 
       created: ->
-        @enabled = true
 
       ready: ->
 

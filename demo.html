@@ -6,26 +6,26 @@
     <script src="http://localhost:35729/livereload.js"></script>
     <script src="node_modules/polymer/platform.js"></script>
     <link rel="import" href="node_modules/polymer/polymer.html">
-    <link rel="import" href="build/ui-button.html">
-    <link rel="stylesheet" href="node_modules/ui-fonts/font-awesome.less">
+    <link rel="import" href="src/ui-button.html">
+    <link rel="import" href="node_modules/ui-fonts/fonts.html">
+    <link rel="import" href="node_modules/ui-styles/ui-styles.html">
     <style>
       body {
         font-family: "Helvetica Neue", "Helvetica", Arial;
+      }
+      #holder {
+        padding: 4em;
       }
     </style>
   </head>
   <body unresolved>
     <div id="holder">
-      <ui-button icon="fa-bomb" label="The Bomb!" onclick="console.log('boom!');">
+      <ui-button onclick="console.log('boom!');">
+      <icon bomb></icon><label>The Bomb!</label>
       </ui-button>
-      <ui-button icon="fa-bullhorn" label="No Yelling" enabled="false" onclick="console.log('aaaa!');">
+      <ui-button disabled onclick="console.log('aaaa!');">
+      <icon bullhorn></icon><label>Disablled Yelling</label>
       </ui-button>
-      <ui-button inverted icon="fa-bomb" label="The Bomb!" onclick="console.log('boom!');">
-      </ui-button>
-      <ui-button inverted icon="fa-bullhorn" label="No Yelling" enabled="false" onclick="console.log('aaaa!');">
-      </ui-button>
-      <ui-button style="width:40px" label="I'm Cut Off!"></ui-button>
-      <ui-button style="width:40px" icon="fa-cube" label="I'm Cut Off, Too!"></ui-button>
     </div>
     <script>
       document.addEventListener('polymer-ready', function() {
