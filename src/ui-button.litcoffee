@@ -24,10 +24,11 @@ Marker turns the button off temporarily. Please hide buttons instead.
       pointerup: ->
         @$.button.classList.remove 'pressed'
       supress: (evt) ->
-        evt.preventDefault()
-        evt.stopPropagation()
-        evt.stopImmediatePropagation()
-        return false
+        if @hasAttribute 'disabled'
+          evt.preventDefault()
+          evt.stopPropagation()
+          evt.stopImmediatePropagation()
+          return false
 
       pointerenter: ->
       pointerleave: ->

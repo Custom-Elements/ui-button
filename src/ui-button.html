@@ -8,6 +8,7 @@ on-mouseleave="{{pointerleave}}"
   <link rel="stylesheet" type="text/css" href="./ui-button.less">
   <section id="disabler" on-click="{{supress}}"></section>
   <section id="button"
+    on-click="{{supress}}"
     class="{{ {enabled: enabled} | tokenList }}"
     horizontal layout centered >
     <content></content>

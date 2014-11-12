@@ -6,6 +6,8 @@
   position: relative;
   .cannot-select-text;
   #button {
+    color: @color-inverted-text;
+    background-color: @black;
     overflow: hidden;
     border: none;
     outline: none;
@@ -28,10 +30,50 @@
 }
 
 :host([disabled]) {
-   #disabler {
-     .disabler-disabled;
-   }
-   #button {
-     .invert;
-   }
+  #button {
+   .disabled;
+  }
+}
+
+:host([red]) {
+  #button {
+    background-color: @red;
+  }
+}
+
+:host([orange]) {
+  #button {
+    background-color: @orange;
+  }
+}
+
+:host([yellow]) {
+  #button {
+    color: @color-text;
+    background-color: @yellow;
+  }
+}
+
+:host([green]) {
+  #button {
+    background-color: @green;
+  }
+}
+
+:host([blue]) {
+  #button {
+    background-color: @blue;
+  }
+}
+
+:host([indigo]) {
+  #button {
+    background-color: @indigo;
+  }
+}
+
+:host([violet]) {
+  #button {
+    background-color: @violet;
+  }
 }
