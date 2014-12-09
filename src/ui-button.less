@@ -8,7 +8,6 @@
   #button {
     color: @color-inverted-text;
     background-color: @black;
-    overflow: hidden;
     border: none;
     outline: none;
     margin: 0;
@@ -16,10 +15,7 @@
     .flat;
     .border;
     .transition(@transition);
-    cursor: default;
-    &.enabled {
-      cursor: pointer;
-    }
+    cursor: pointer;
     &.pressed {
       .transform(scale(0.95, 0.95));
     }
@@ -35,15 +31,39 @@
   }
 }
 
+:host([minimal]) {
+  #button {
+    padding: 0;
+    color: @color-text;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+  }
+}
+
 :host([red]) {
   #button {
     background-color: @red;
   }
 }
 
+:host([minimal][red]) {
+  #button {
+    color: @red;
+    background-color: transparent;
+  }
+}
+
 :host([orange]) {
   #button {
     background-color: @orange;
+  }
+}
+
+:host([minimal][orange]) {
+  #button {
+    color: @orange;
+    background-color: transparent;
   }
 }
 
@@ -54,9 +74,23 @@
   }
 }
 
+:host([minimal][yellow]) {
+  #button {
+    color: @yellow;
+    background-color: transparent;
+  }
+}
+
 :host([green]) {
   #button {
     background-color: @green;
+  }
+}
+
+:host([minimal][green]) {
+  #button {
+    color: @green;
+    background-color: transparent;
   }
 }
 
@@ -66,14 +100,35 @@
   }
 }
 
+:host([minimal][blue]) {
+  #button {
+    color: @blue;
+    background-color: transparent;
+  }
+}
+
 :host([indigo]) {
   #button {
     background-color: @indigo;
   }
 }
 
+:host([minimal][indigo]) {
+  #button {
+    color: @indigo;
+    background-color: transparent;
+  }
+}
+
 :host([violet]) {
   #button {
     background-color: @violet;
+  }
+}
+
+:host([minimal][violet]) {
+  #button {
+    color: @violet;
+    background-color: transparent;
   }
 }
