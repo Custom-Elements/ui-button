@@ -4,6 +4,7 @@ The basic button that wraps your content. Fun press effects.
 Attach an `onclick` with straight JavaScript or an `on-click` if you
 use this as a component of another Polymer element.
 
+    console.log 'button up'
     Polymer 'ui-button',
 
 ##Events
@@ -20,9 +21,9 @@ Marker turns the button off temporarily. Please hide buttons instead.
 
       pointerdown: ->
         if not @hasAttribute 'disabled'
-          @$.button.classList.add 'pressed'
+          @setAttribute 'pressed', ''
       pointerup: ->
-        @$.button.classList.remove 'pressed'
+        @removeAttribute 'pressed'
       supress: (evt) ->
         if @hasAttribute 'disabled'
           evt.preventDefault()
