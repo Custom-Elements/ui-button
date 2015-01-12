@@ -20,6 +20,7 @@
     cursor: pointer;
   }
   #disabler {
+    .disabler;
     .disabler-enabled;
   }
 }
@@ -29,8 +30,9 @@
 }
 
 :host([disabled]) {
-  #button {
-   .disabled;
+  #disabler {
+    .disabler;
+    .disabler-disabled;
   }
 }
 

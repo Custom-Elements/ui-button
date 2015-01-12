@@ -44,7 +44,7 @@
       <ui-button violet onclick="console.log('boom!');">
         <icon pencil></icon><label>Art !</label>
       </ui-button>
-      <ui-button disabled onclick="console.log('should not happen!');">
+      <ui-button id="disabled" disabled onclick="console.log('should not happen!');">
         <icon bullhorn></icon><label>Disable Yelling</label>
       </ui-button>
       <ui-button minimal yellow onclick="console.log('beep');">
@@ -54,6 +54,14 @@
     <script>
       document.addEventListener('polymer-ready', function() {
         //poke your element here
+        setInterval(function(){
+           var d = document.querySelector('#disabled');
+           if (d.hasAttribute('disabled')) {
+             d.removeAttribute('disabled');
+           } else {
+             d.setAttribute('disabled', '')
+           }
+        }, 2000)
       })
     </script>
   </body>
