@@ -4,7 +4,6 @@ The basic button that wraps your content. Fun press effects.
 Attach an `onclick` with straight JavaScript or an `on-click` if you
 use this as a component of another Polymer element.
 
-    console.log 'button up'
     Polymer 'ui-button',
 
 ##Events
