@@ -1,5 +1,6 @@
 @import "../node_modules/ui-styles/variables";
 @import "../node_modules/ui-styles/visual-elements";
+@import "../node_modules/ui-styles/keyframes";
 
 :host {
   display: inline-flex;
@@ -134,6 +135,22 @@
 :host([minimal][violet]) {
   #button {
     color: @violet;
+    background-color: transparent;
+  }
+}
+
+:host([rainbow]) {
+  #button {
+    color: @black;
+    animation: rainbowBackground @animation-duration infinite linear;
+    -webkit-animation: rainbowBackground @animation-duration infinite linear;
+  }
+}
+
+:host([minimal][rainbow]) {
+  #button {
+    animation: rainbow @animation-duration infinite linear;
+    -webkit-animation: rainbow @animation-duration infinite linear;
     background-color: transparent;
   }
 }
