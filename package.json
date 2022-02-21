@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "dependencies": {
     "polymer-serve": "^0.0.30",
-    "polymer": "git://github.com/custom-elements/polymer#master",
-    "ui-styles": "git://github.com/custom-elements/ui-styles#master",
+    "polymer": "git+ssh://github.com/custom-elements/polymer#master",
+    "ui-styles": "git+ssh://github.com/custom-elements/ui-styles#master",
     "ui-fonts": "^0.0.1"
   },
   "author": "Will Ballard <wballard@mailframe.net>",
-  "repository": "git://github.com/custom-elements/ui-button.git",
+  "repository": "git+ssh://github.com/custom-elements/ui-button.git",
   "license": "ISC",
   "scripts": {
     "test": "polymer-serve ."
